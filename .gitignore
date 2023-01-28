@@ -1,0 +1,11 @@
+# Ignore node_modules repository
+node_modules/*
+
+# .DS_Store
+**/.DS_Store
+
+# .next/
+.next/
+
+#.vscode/
+.vscode/
