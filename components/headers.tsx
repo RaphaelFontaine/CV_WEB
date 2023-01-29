@@ -39,7 +39,7 @@ export default function HeaderAction() {
             <Link
                 key={link.label}
                 href={link.link}
-                className="transition-all duration-500 text-white hover:text-primary"
+                className="transition-all duration-500 text-white hover:text-third"
             >
                 {link.label}
             </Link>
@@ -59,19 +59,18 @@ export default function HeaderAction() {
                     className='bg-transparent transition-all duration-1000'
                     classNames={{
                         'root': "bg-transparent",
-                        'modal': "h-full w-auto bg-fff0000",
+                        'modal': "h-full w-[40vw] bg-transparent",
                         'header': "hidden",
                         'body': "h-full w-auto bg-fff0000 flex justify-center"
                     }}
                     opened={opened}
                     onClose={() => setOpened(false)}
                 >
-                    <img 
-                        src="/assets/resume.png"
-                    />
+                    {/* <img src="/assets/resume.png"/> */}
+                    <iframe className='w-full' src="/assets/resume.pdf"/>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
-                    <Button onClick={() => setOpened(true)}>
+                    <Button className="hover:bg-primary hover:text-third transition-all duration-1000" onClick={() => setOpened(true)}>
                         My PDF Resume
                     </Button>
                 </Group>
@@ -96,7 +95,7 @@ function Phone_menu_item({link} : {link : Link}){
                 <Link 
                     href={link.link}
                     target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
-                    className="flex item-center pl-4 py-3 hover:text-primary transition-all">
+                    className="flex item-center pl-4 py-3 hover:text-third transition-all">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>

@@ -11,8 +11,8 @@ export default function Home() {
         <link rel="icon" href="/letter-R.png" />
       </Head>
       <HeaderAction></HeaderAction>
-      <main>
-        Main body
+      <main className='bg-primary'>
+        
       </main>
     </>
   )

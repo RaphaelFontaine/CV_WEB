@@ -10,8 +10,9 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'primary': "#ffff00",
-      'secondary': "#f00020",
+      'primary': "#434DA4",
+      'secondary': "#28293F",
+      'third': '#64ffda',
       'white': "#fff",
       'black':"#000",
       'transparent': "#fff0000",
