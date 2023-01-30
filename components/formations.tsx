@@ -1,7 +1,7 @@
 export default function Formations(){
     return(
-        <div>
-            Formations Section
+        <div id='formations'>
+            Formations Section <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 } 

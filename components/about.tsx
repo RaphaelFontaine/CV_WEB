@@ -1,7 +1,7 @@
 export default function About(){
     return(
-        <div>
-            About Section
+        <div id='about'>
+            About Section <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 } 

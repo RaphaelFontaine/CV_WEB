@@ -1,7 +1,7 @@
 export default function Contact(){
     return(
-        <div>
-            Contact Section
+        <div id='contact'>
+            Contact Section <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 } 

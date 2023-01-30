@@ -15,19 +15,19 @@ interface Link {
 
 const links : Link[]=[
     {
-        link : "/",
+        link : "#about",
         label : "About"
     },
     {
-        link : "/",
+        link : "#formations",
         label : "Formations"
     },
     {
-        link : "/",
+        link : "#experiences",
         label : "Experiences",
     },
     {
-        link : "",
+        link : "#contact",
         label : "Contact",
     }
 ]
