@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import HeaderAction from '@/components/headers'
+import About from '@/components/about'
+import Formations from '@/components/formations'
+import Experiences from '@/components/experiences'
+import Contact from '@/components/contact'
 
 
 export default function Home() {
@@ -11,8 +15,11 @@ export default function Home() {
         <link rel="icon" href="/letter-R.png" />
       </Head>
       <HeaderAction></HeaderAction>
-      <main className='bg-primary'>
-        
+      <main className='pt-[95px] bg-primary'>
+        <About></About>
+        <Formations></Formations>
+        <Experiences></Experiences>
+        <Contact></Contact>
       </main>
     </>
   )

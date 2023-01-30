@@ -36,6 +36,10 @@ export default function HeaderAction() {
     const [opened, setOpened] = useState(false);
     const items = links.map((link) => {
         return (
+            <>
+            <div className="loader">
+                <div className="circle"></div>
+            </div>
             <Link
                 key={link.label}
                 href={link.link}
@@ -43,6 +47,7 @@ export default function HeaderAction() {
             >
                 {link.label}
             </Link>
+            </>
         );
     });
   
@@ -61,13 +66,13 @@ export default function HeaderAction() {
                         'root': "bg-transparent",
                         'modal': "h-full w-[40vw] bg-transparent",
                         'header': "hidden",
-                        'body': "h-full w-auto bg-fff0000 flex justify-center"
+                        'body': "h-full w-[40vw] bg-fff0000 flex justify-center"
                     }}
                     opened={opened}
                     onClose={() => setOpened(false)}
                 >
                     {/* <img src="/assets/resume.png"/> */}
-                    <iframe className='w-full' src="/assets/resume.pdf"/>
+                    <iframe className="w-full" src="/assets/resume.pdf"/>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
                     <Button className="hover:bg-primary hover:text-third transition-all duration-1000" onClick={() => setOpened(true)}>
