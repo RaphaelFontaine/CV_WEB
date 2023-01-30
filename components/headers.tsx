@@ -66,7 +66,7 @@ export default function HeaderAction() {
                         'root': "bg-transparent",
                         'modal': "h-full w-[40vw] bg-transparent",
                         'header': "hidden",
-                        'body': "h-full w-[40vw] bg-fff0000 flex justify-center"
+                        'body': "h-full w-full bg-fff0000 flex justify-center"
                     }}
                     opened={opened}
                     onClose={() => setOpened(false)}

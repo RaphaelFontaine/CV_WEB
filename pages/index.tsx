@@ -7,6 +7,7 @@ import GetInTouchSimple from '@/components/contact'
 import Icon from '@/components/icon'
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -14,7 +15,9 @@ export default function Home() {
         <meta name="description" content="Raphael Fontaine CV Data Engineer Developer" />
         <link rel="icon" href="/letter-R.png" />
       </Head>
+      
       <HeaderAction></HeaderAction>
+      
       <main className='pt-[95px] bg-primary'>
         <About></About>
         <Formations></Formations>
