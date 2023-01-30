@@ -52,7 +52,7 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className='fixed top-0 lg:bg-secondary inset-x-0 z-50'>
+        <div className='flex top-0 lg:bg-secondary inset-x-0 z-50'>
             <div className='h-24 max-w-6xl mx-auto bg-secondary flex items-center'>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
@@ -71,7 +71,6 @@ export default function HeaderAction() {
                     opened={opened}
                     onClose={() => setOpened(false)}
                 >
-                    {/* <img src="/assets/resume.png"/> */}
                     <iframe className="w-full" src="/assets/resume.pdf"/>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
