@@ -64,14 +64,19 @@ export default function HeaderAction() {
                     className='bg-transparent transition-all duration-1000'
                     classNames={{
                         'root': "bg-transparent",
-                        'modal': "h-full w-[40vw] bg-transparent",
+                        'modal': "h-full w-[42vw] bg-transparent",
                         'header': "hidden",
                         'body': "h-full w-full bg-fff0000 flex justify-center"
                     }}
                     opened={opened}
                     onClose={() => setOpened(false)}
                 >
-                    <iframe className="w-full" src="/assets/resume.pdf"/>
+                    <div className="w-full space-y-2">
+                        <iframe className="w-full h-full" src="/assets/resume.pdf"/>
+                        <Button className='bg-primary flex items-center justify-center'>
+                            Download
+                        </Button>
+                    </div>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
                     <Button className="hover:bg-primary hover:text-third transition-all duration-1000" onClick={() => setOpened(true)}>
