@@ -68,7 +68,7 @@ export default function HeaderAction() {
             <Link
                 key={link.label}
                 href={link.link}
-                className="transition-all duration-500 text-white hover:text-third"
+                className="transition-all duration-500 text-white hover:text-secondary"
             >
                 {link.label}
             </Link>
@@ -77,8 +77,8 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className={`flex fixed ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full h-24 bg-secondary transition-all duration-500`}>
-            <div className='h-24 max-w-6xl mx-auto bg-secondary flex items-center'>
+        <div className={`flex fixed ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
+            <div className='h-24 max-w-6xl mx-auto bg-primary border-b-[1px] border-secondary flex items-center'>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
                 </Link>
@@ -104,7 +104,7 @@ export default function HeaderAction() {
                     </div>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
-                    <Button className="hover:bg-primary hover:text-third transition-all duration-1000" onClick={() => setOpened(true)}>
+                    <Button className="hover:bg-primary hover:text-secondary transition-all duration-1000" onClick={() => setOpened(true)}>
                         My PDF Resume
                     </Button>
                 </Group>
@@ -129,7 +129,7 @@ function Phone_menu_item({link} : {link : Link}){
                 <Link 
                     href={link.link}
                     target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
-                    className="flex item-center pl-4 py-3 hover:text-third transition-all">
+                    className="flex item-center pl-4 py-3 hover:text-secondary transition-all">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>

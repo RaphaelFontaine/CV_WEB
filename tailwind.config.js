@@ -10,12 +10,15 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'primary': "#434DA4",
-      'secondary': "#28293F",
-      'third': '#64ffda',
+      'primary': "#333",
+      'secondary': "#6ee7b7",
+      'third': '#e5e7eb',
       'white': "#fff",
       'black':"#000",
       'transparent': "#fff0000",
+    },
+    fontSize: {
+      'name': '4.5rem'
     },
     extend: {},
   },
