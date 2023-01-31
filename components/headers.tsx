@@ -7,6 +7,7 @@ import {
 } from '@mantine/core';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { BsFillFileEarmarkPdfFill, BsCloudDownloadFill } from 'react-icons/bs';
 
 interface Link {
     link: string;
@@ -78,7 +79,7 @@ export default function HeaderAction() {
   
     return (
         <div className={`flex fixed ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
-            <div className='h-24 max-w-6xl mx-auto bg-primary border-b-[1px] border-secondary flex items-center'>
+            <div className='flex items-center h-24 max-w-6xl mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
                 </Link>
@@ -89,24 +90,24 @@ export default function HeaderAction() {
                     className='bg-transparent transition-all duration-1000'
                     classNames={{
                         'root': "bg-transparent",
-                        'modal': "h-full w-[42vw] bg-transparent",
+                        'modal': "h-full -mt-6 w-[42vw] bg-transparent",
                         'header': "hidden",
                         'body': "h-full w-full bg-fff0000 flex justify-center"
                     }}
                     opened={opened}
                     onClose={() => setOpened(false)}
                 >
-                    <div className="w-full space-y-2">
+                    <div className="w-full space-y-8">
                         <iframe className="w-full h-full" src="/assets/resume.pdf"/>
-                        <a href="/assets/resume.pdf" className='bg-primary flex items-center justify-center' download>
-                            Download
+                        <div className="flex group text-white hover:text-secondary transition-all duration-500 items-center justify-center">
+                        <a href="/assets/resume.pdf" className='w-14 h-14 rounded-full overflow-hidden border-2 hover:scale-110 text-white group-hover:text-secondary justify-center items-center flex transition-all duration-500' download>
+                            <BsCloudDownloadFill className='w-6 h-6'/>
                         </a>
+                        </div>
                     </div>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
-                    <Button className="hover:bg-primary hover:text-secondary transition-all duration-1000" onClick={() => setOpened(true)}>
-                        My PDF Resume
-                    </Button>
+                        <BsFillFileEarmarkPdfFill className='text-white w-6 h-auto hover:text-secondary transition-all duration-500 cursor-pointer' onClick={() => setOpened(true)}/>
                 </Group>
                 <Burger
                     className='lg:hidden ml-auto mr-4 border-4 border-black'
