@@ -77,7 +77,7 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className={`sticky ${ scrollDirection === "down" ? "-top-24" : "top-0"} h-24 bg-secondary transition-all duration-500`}>
+        <div className={`flex fixed ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full h-24 bg-secondary transition-all duration-500`}>
             <div className='h-24 max-w-6xl mx-auto bg-secondary flex items-center'>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
