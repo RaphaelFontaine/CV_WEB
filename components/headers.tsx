@@ -6,7 +6,7 @@ import {
     Group,
 } from '@mantine/core';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface Link {
     link: string;
@@ -32,7 +32,32 @@ const links : Link[]=[
     }
 ]
 
+function useScrollDirection() {
+    const [scrollDirection, setScrollDirection] = useState<string|undefined>();
+  
+    useEffect(() => {
+      let lastScrollY = window.pageYOffset;
+  
+      const updateScrollDirection = () => {
+        const scrollY = window.pageYOffset;
+        const direction = scrollY > lastScrollY ? "down" : "up";
+        if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+          setScrollDirection(direction);
+        }
+        console.log(scrollDirection)
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+      };
+      window.addEventListener("scroll", updateScrollDirection); // add event listener
+      return () => {
+        window.removeEventListener("scroll", updateScrollDirection); // clean up
+      }
+    }, [scrollDirection]);
+
+    return scrollDirection;
+};
+
 export default function HeaderAction() {
+    const scrollDirection = useScrollDirection();
     const [opened, setOpened] = useState(false);
     const items = links.map((link) => {
         return (
@@ -52,7 +77,7 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className='flex top-0 lg:bg-secondary inset-x-0 z-50'>
+        <div className={`sticky ${ scrollDirection === "down" ? "-top-24" : "top-0"} h-24 bg-secondary transition-all duration-500`}>
             <div className='h-24 max-w-6xl mx-auto bg-secondary flex items-center'>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
@@ -73,9 +98,9 @@ export default function HeaderAction() {
                 >
                     <div className="w-full space-y-2">
                         <iframe className="w-full h-full" src="/assets/resume.pdf"/>
-                        <Button className='bg-primary flex items-center justify-center'>
+                        <a href="/assets/resume.pdf" className='bg-primary flex items-center justify-center' download>
                             Download
-                        </Button>
+                        </a>
                     </div>
                 </Modal>
                 <Group position="center" className='transition-all duration-1000'>
@@ -88,7 +113,7 @@ export default function HeaderAction() {
                     color={opened ? '#ADC906' : 'white'}
                     opened={opened}
                     onClick={() => setOpened(!opened)}
-                    />
+                />
             </div>
             <Collapse in={opened} className="lg:hidden mx-12 flex flex-col bg-footer-grey space-x-8 max-h-[85vh] overflow-y-scroll">
                 {links.map(link => <Phone_menu_item link={link}/>)}

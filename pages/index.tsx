@@ -18,7 +18,7 @@ export default function Home() {
       
       <HeaderAction></HeaderAction>
       
-      <main className='pt-[95px] bg-primary'>
+      <main className='bg-primary'>
         <About></About>
         <Formations></Formations>
         <Experiences></Experiences>
