@@ -3,7 +3,7 @@ import BackgroundAnimation from "@/utils/backgroundAnimation";
 export default function About(){
     return(
         <div className="relative bg-primary min-h-screen" id='about'>
-            <div className="h-full w-full absolute">
+            <div className="h-full w-full">
             <BackgroundAnimation/>
             </div>
             
