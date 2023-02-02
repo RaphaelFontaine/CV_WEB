@@ -3,8 +3,8 @@ import BackgroundAnimation from "@/utils/backgroundAnimation";
 export default function About(){
     return(
         <div className="relative bg-primary min-h-screen" id='about'>
-            <div className="h-full w-full absolute z-20 ">
-            <BackgroundAnimation/>
+            <div className="">
+                <BackgroundAnimation/>
             </div>
             
             <div className="flex flex-col justify-center h-screen pb-20 max-w-5xl mx-auto z-50 px-6">
