@@ -5,6 +5,7 @@ import Formations from '@/components/formations'
 import Experiences from '@/components/experiences'
 import GetInTouchSimple from '@/components/contact'
 import Icon from '@/components/icon'
+import SocialMedia from '@/components/social-media'
 
 export default function Home() {
   
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       
       <HeaderAction></HeaderAction>
+      <SocialMedia></SocialMedia>
       
       <main className='bg-primary pt-[95px]'>
         <About></About>
