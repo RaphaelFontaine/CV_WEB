@@ -1,13 +1,13 @@
 import {
     Collapse,
     Burger,
-    Modal,
     Button,
     Group,
 } from '@mantine/core';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
+import { TbLetterR } from 'react-icons/tb';
 
 interface Link {
     link: string;
@@ -81,7 +81,7 @@ export default function HeaderAction() {
         <div className={`flex fixed z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
             <div className='flex items-center h-24 max-w-6xl mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
                 <Link href={"/"}>
-                    <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
+                    <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
                 </Link>
                 <div className='hidden lg:flex items-center space-x-8 ml-20 h-full'>
                     {items}
