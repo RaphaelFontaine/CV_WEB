@@ -2,21 +2,21 @@ import BackgroundAnimation from "@/utils/backgroundAnimation";
 
 export default function About(){
     return(
-        <div className="flex bg-primary min-h-screen" id='about'>
-
-            <div>
-                <BackgroundAnimation/>
+        <div className="relative bg-primary min-h-screen" id='about'>
+            <div className="h-full w-full absolute z-20 ">
+            <BackgroundAnimation/>
             </div>
+            
             <div className="flex flex-col justify-center h-screen pb-20 max-w-5xl mx-auto z-50 px-6">
-                <div className="text-secondary">
+                <h1 className="text-secondary">
                     Hi, my name is
-                </div>
-                <div className="font-bold text-name text-white">
+                </h1>
+                <h1 className="font-bold text-name text-white">
                     Raphael FONTAINE
-                </div>
-                <div className="text-third">
+                </h1>
+                <h2 className="text-third">
                     I'm a french Data Engineer
-                </div>
+                </h2>
                 <div className="flex flex-row pt-20 space-x-10">
                     <a href='#contact' className="button-contact transition-all duration-500"> 
                         Contact Me
@@ -31,7 +31,6 @@ export default function About(){
                     </a>
                 </div>
             </div>
-            
         </div>
     )
 }

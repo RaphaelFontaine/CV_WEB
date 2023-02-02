@@ -78,7 +78,7 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className={`flex fixed ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
+        <div className={`flex fixed z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
             <div className='flex items-center h-24 max-w-6xl mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
                 <Link href={"/"}>
                     <img src="/letter-R.png" alt={"R"} className="mx-2 h-14"/>
