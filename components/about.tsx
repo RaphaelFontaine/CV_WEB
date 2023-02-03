@@ -1,4 +1,4 @@
-import BackgroundAnimation from "@/utils/backgroundAnimation";
+import BackgroundAnimation from "@/components/backgroundAnimation";
 
 export default function About(){
     return(
