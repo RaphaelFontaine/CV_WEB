@@ -18,7 +18,7 @@ export default function About(){
                     I'm a french Data Engineer
                 </h2>
                 <div className="flex flex-row pt-20 space-x-10">
-                    <a href='#contact' className="button-contact transition-all duration-500"> 
+                    <a href='#contact' className="button-contact transition-all duration-500 scroll-smooth md:scroll-auto"> 
                         Contact Me
                     </a>
                     <a href='#formations' className="button-contact group transition-all duration-500"> 

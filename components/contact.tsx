@@ -37,12 +37,12 @@ export default function GetInTouchSimple() {
     }
   
     return (
-      <div className="phone:w-[50vw]">
+      <div id="contact" className="phone:w-[50vw]">
           <div className='bg-fifth border-2 border-white hover:border-secondary transition-all duration-500 rounded-xl'>
             <SimpleGrid className='px-10 pt-6 space-x-5' cols={2} mt="xl">
                 <TextInput label="Name *" placeholder="Your name"
                   {...register('full_name', {
-                    required : { value : true, message : "Ce champ est requis !"},
+                    required : { value : true, message : "This field is required !"},
                     minLength : { value : 2, message : ""}
                   })}
                   error={errors.full_name?.message}
@@ -59,8 +59,8 @@ export default function GetInTouchSimple() {
                   }}
                   className='hover:border-secondary'
                   {...register('email', {
-                    required : { value : true, message : "Ce champ est requis !"},
-                    pattern: { value : MAIL_REGEX, message : "Veuillez renseigner un email valide !"}
+                    required : { value : true, message : "This field is required !"},
+                    pattern: { value : MAIL_REGEX, message : "Please enter a valid email !"}
                   })}
                   error={errors.email?.message}
                 />
@@ -100,7 +100,7 @@ export default function GetInTouchSimple() {
             />
             
             <Group position="center" mt="xl" className='flex flex-col'>
-              <Button onClick={submitForm} type="submit" size="md" className='bg-fifth button-form text-white hover:text-secondary mt-7 hover:bg-white transition-all active:scale-90 duration-1000 mb-10'>
+              <Button onClick={submitForm} type="submit" size="md" className='button-send bg-fifth button-form border-2 border-white rounded-md text-white hover:text-secondary mt-7 hover:bg-white transition-all active:scale-90 duration-1000 mb-10'>
                 Envoyer
               </Button>
             </Group>
