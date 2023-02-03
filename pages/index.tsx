@@ -22,8 +22,8 @@ export default function Home() {
       
       <main className='bg-primary pt-[95px]'>
         <About></About>
-        {/* <Formations></Formations>
-        <Experiences></Experiences>  */}
+        <Formations></Formations>
+        {/* <Experiences></Experiences>  */}
          <div className='flex flex-wrap items-center justify-center gap-10 py-16'>
           <GetInTouchSimple></GetInTouchSimple>
           <Icon></Icon>

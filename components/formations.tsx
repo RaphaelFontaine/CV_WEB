@@ -1,4 +1,5 @@
 import { FORMATIONS } from "../utils/formations"
+import TimelineFunction from "./timeline"
 
 interface FormationsProps {
     title: string,
@@ -28,14 +29,15 @@ export function Formation(props: FormationsProps){
 export default function Formations(){
     return (
         <>
-            {FORMATIONS.map((formation : any, index : any) => 
+            <TimelineFunction/>
+            {/* {FORMATIONS.map((formation : any, index : any) => 
                 <Formation 
                     key={index}
                     title={formation.title}
                     date={formation.date}
                     text={formation.text}
                 />
-            )}
+            )} */}
         </>
     )
 } 
