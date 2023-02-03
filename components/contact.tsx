@@ -38,26 +38,26 @@ export default function GetInTouchSimple() {
   
     return (
       <div className="phone:w-[50vw]">
-          <div className='bg-light-grey border-2 border-white hover:border-green transition-all duration-500 rounded-xl'>
+          <div className='bg-fifth border-2 border-white hover:border-secondary transition-all duration-500 rounded-xl'>
             <SimpleGrid className='px-10 pt-6 space-x-5' cols={2} mt="xl">
-                <TextInput label="Your name" placeholder="Your name"
+                <TextInput label="Name *" placeholder="Your name"
                   {...register('full_name', {
                     required : { value : true, message : "Ce champ est requis !"},
                     minLength : { value : 2, message : ""}
                   })}
                   error={errors.full_name?.message}
-                  className='hover:border-green'
+                  className='hover:border-secondary'
                   classNames={{
-                    "input": "focus:border-green",
+                    "input": "focus:border-secondary border-2",
                     'label' : "text-white"
                   }}
                 />
-                <TextInput label="E-mail" placeholder="your.name@gmail.com"
+                <TextInput label="E-mail *" placeholder="your.name@gmail.com"
                   classNames={{
-                    "input": "focus:border-green",
+                    "input": "focus:border-secondary border-2",
                     'label' : "text-white"
                   }}
-                  className='hover:border-green'
+                  className='hover:border-secondary'
                   {...register('email', {
                     required : { value : true, message : "Ce champ est requis !"},
                     pattern: { value : MAIL_REGEX, message : "Veuillez renseigner un email valide !"}
@@ -68,29 +68,26 @@ export default function GetInTouchSimple() {
             <SimpleGrid className='px-10 py-6 space-x-5' cols={2} mt="xl" >
                 <TextInput label="Phone number" placeholder="0611223344"
                   classNames={{
-                    "input": "focus:border-green",
+                    "input": "focus:border-secondary border-2",
                     'label' : "text-white"
                   }}
-                  className='focus:border-green'
-                  {...register('phone', {
-                    required : { value : true, message : "Ce champ est requis !"},
-                    pattern: { value : PHONE_REGEX, message : "error phone"}
-                  })}
+                  className='focus:border-secondary'
+                  {...register('phone')}
                   error={errors.phone?.message}
                 />
                 <TextInput label="Subject" placeholder="subject"
                   classNames={{
-                    "input": "focus:border-green",
+                    "input": "focus:border-secondary border-2",
                     'label' : "text-white"
                   }}
-                  className='hover:border-green'
+                  className='hover:border-secondary'
                   {...register('subject')}
                   error={errors.subject?.message}
                 />
             </SimpleGrid>
             <Textarea label="Your message" placeholder="Please include all your relevant information"
                 classNames={{
-                  "input": "focus:border-green",
+                  "input": "focus:border-secondary border-2",
                   'label' : "text-white"
                 }}
                 className='mx-10'
@@ -103,7 +100,7 @@ export default function GetInTouchSimple() {
             />
             
             <Group position="center" mt="xl" className='flex flex-col'>
-              <Button onClick={submitForm} type="submit" size="md" className='bg-white button-form text-green hover:text-white mt-7 hover:bg-green transition-all active:scale-90 duration-1000 mb-10'>
+              <Button onClick={submitForm} type="submit" size="md" className='bg-fifth button-form text-white hover:text-secondary mt-7 hover:bg-white transition-all active:scale-90 duration-1000 mb-10'>
                 Envoyer
               </Button>
             </Group>
