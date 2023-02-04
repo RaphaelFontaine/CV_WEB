@@ -7,6 +7,7 @@ import GetInTouchSimple from '@/components/contact'
 import Icon from '@/components/icon'
 import SocialMedia from '@/components/social-media'
 import { useEffect, useState } from 'react'
+import Skills from '@/components/skills'
 
 export default function Home() {
   const [isMounted, setisMounted] = useState(false);
@@ -31,12 +32,17 @@ export default function Home() {
         
         <main className='bg-primary pt-[95px]'>
           <About></About>
-          <Formations></Formations>
-          {/* <Experiences></Experiences>  */}
-          <div className='flex flex-wrap items-center justify-center gap-10 py-16'>
-            <GetInTouchSimple></GetInTouchSimple>
-            <Icon></Icon>
-          </div> 
+          <div className="relative z-50 mx-auto max-w-5xl space-y-20">
+            <div className="flex flex-wrap w-full pt-16 px-10 justify-center items-center gap-x-10 gap-y-20">
+              <Formations></Formations>
+              <Skills></Skills>
+            </div>
+            {/* <Experiences></Experiences>  */}
+            <div className='flex flex-wrap items-center justify-center gap-10 py-16'>
+              <GetInTouchSimple></GetInTouchSimple>
+              <Icon></Icon>
+            </div> 
+          </div>
         </main>
         </>
       :
