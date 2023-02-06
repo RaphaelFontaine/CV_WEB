@@ -32,16 +32,31 @@ export default function Home() {
         
         <main className='bg-primary pt-[95px]'>
           <About></About>
-          <div className="relative z-50 mx-auto max-w-5xl space-y-20">
-            <div className="flex flex-wrap w-full pt-16 px-10 justify-center items-center gap-x-10 gap-y-20">
-              <Formations></Formations>
-              <Skills></Skills>
+          <div className='py-16 space-y-10'>
+            <div id="experiences" className='text-center tracking-wider text-title text-white'>
+              Experiences
+              <Experiences></Experiences> 
             </div>
-            {/* <Experiences></Experiences>  */}
-            <div className='flex flex-wrap items-center justify-center gap-10 py-16'>
-              <GetInTouchSimple></GetInTouchSimple>
-              <Icon></Icon>
-            </div> 
+          </div>
+          <div className="relative z-50 mx-auto max-w-5xl space-y-10">
+            <div id='skills' className="text-center tracking-wider text-title text-white">
+                  Skills and
+                  <b className="text-secondary text-title"> Formations</b>
+              </div>
+            <div className="flex flex-wrap w-full px-10 justify-center items-center gap-x-10 gap-y-20">
+              <Skills></Skills>
+              <Formations></Formations>
+            </div>
+            <div className='py-16 space-y-10'>
+              <div id='contact' className="text-center text-title tracking-wider text-white">
+                  Contact
+                  <b className="text-secondary text-title"> Form</b>
+              </div>
+              <div className='flex flex-wrap items-center justify-center gap-10'>
+                <GetInTouchSimple></GetInTouchSimple>
+                <Icon></Icon>
+              </div> 
+            </div>
           </div>
         </main>
         </>

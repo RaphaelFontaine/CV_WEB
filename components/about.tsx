@@ -18,10 +18,10 @@ export default function About(){
                     I'm a french Data Engineer
                 </h2>
                 <div className="flex flex-row pt-20 space-x-10">
-                    <a href='#contact' className="button-contact transition-all duration-500 scroll-smooth md:scroll-auto"> 
+                    <a href="#contact" className="button-contact transition-all duration-500"> 
                         Contact Me
                     </a>
-                    <a href='#formations' className="button-contact group transition-all duration-500"> 
+                    <a href='#experiences' className="button-contact group transition-all duration-500"> 
                         <span className="flex flex-row">
                             View my work
                             <svg width="20px" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex justify-center ml-4 items-center transition-all duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

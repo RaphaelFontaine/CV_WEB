@@ -20,12 +20,12 @@ const links : Link[]=[
         label : "About"
     },
     {
-        link : "#formations",
-        label : "Formations"
-    },
-    {
         link : "#experiences",
         label : "Experiences",
+    },
+    {
+        link : "#skills",
+        label : "Skills"
     },
     {
         link : "#contact",
@@ -78,7 +78,7 @@ export default function HeaderAction() {
     });
   
     return (
-        <div className={`flex fixed z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
+        <div className={`flex fixed backdrop-blur-xl z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
             <div className='flex items-center h-24 max-w-6xl mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
                 <Link href={"/"}>
                     <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>

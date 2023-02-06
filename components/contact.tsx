@@ -37,7 +37,7 @@ export default function GetInTouchSimple() {
     }
   
     return (
-      <div id="contact" className="phone:w-[50vw]">
+      <div className="phone:w-[50vw]">
           <div className='bg-fifth border-2 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] border-secondary transition-all duration-500 rounded-xl'>
             <SimpleGrid className='px-10 pt-6 space-x-5' cols={2} mt="xl">
                 <TextInput label="Name *" placeholder="Your name"

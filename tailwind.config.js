@@ -21,7 +21,8 @@ module.exports = {
     },
     fontSize: {
       'name': '4.5rem',
-      'skills': '0.875rem'
+      'skills': '0.875rem',
+      'title': '2.25rem',
     },
     extend: {},
   },

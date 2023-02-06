@@ -7,7 +7,7 @@ export const SKILLS = [
     },
     {
         name: "Java",
-        logo: "/assets/java.jpg",
+        logo: "/assets/java.png",
     },
     {
         name: "Docker",
