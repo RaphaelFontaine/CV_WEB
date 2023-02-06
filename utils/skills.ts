@@ -26,11 +26,43 @@ export const SKILLS = [
         logo: "/assets/mysql.png",
     },
     {
-        name: "ElasticSearch",
-        logo: "/assets/elastic.webp",
+        name: "Elastic",
+        logo: "/assets/elasticsearch.svg",
     },
     {
         name: "Kibana",
         logo: "/assets/kibana.png",
+    },
+    {
+        name: "C",
+        logo: "/assets/c.png",
+    },
+    {
+        name: "R",
+        logo: "/assets/R.png",
+    },
+    {
+        name: "TypeScript",
+        logo: "/assets/typescript.png",
+    },
+    {
+        name: "React",
+        logo: "/assets/react.png",
+    },
+    {
+        name: "NextJS",
+        logo: "/assets/nextJS.png",
+    },
+    {
+        name: "Tailwind",
+        logo: "/assets/tailwind.png",
+    },
+    {
+        name: "CSS",
+        logo: "/assets/css.png",
+    },
+    {
+        name: "Mantine",
+        logo: "/assets/mantine.png",
     },
 ]

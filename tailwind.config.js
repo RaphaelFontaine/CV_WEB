@@ -20,7 +20,8 @@ module.exports = {
       'transparent': "#fff0000",
     },
     fontSize: {
-      'name': '4.5rem'
+      'name': '4.5rem',
+      'skills': '0.875rem'
     },
     extend: {},
   },
