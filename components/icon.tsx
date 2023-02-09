@@ -17,7 +17,7 @@ export default function Icon() {
             </div>
           </a>
 
-          <a href="mailto:contact@kancoon.fr">
+          <a href="mailto:raphaelfontaine.pro@gmail.com">
             <div className="card group overflow-hidden duration-500 transition-all">
                 <div className='flex flex-col items-center justify-center space-y-6'>
                       <div className="p-1 flex items-center justify-center h-20 w-20">
