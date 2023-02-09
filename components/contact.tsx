@@ -101,7 +101,7 @@ export default function GetInTouchSimple() {
             
             <Group position="center" mt="xl" className='flex flex-col'>
               <Button onClick={submitForm} type="submit" size="md" className='button-send bg-fifth button-form border-2 border-white rounded-md text-white hover:text-secondary mt-7 hover:bg-white transition-all active:scale-90 duration-1000 mb-10'>
-                Envoyer
+                Send
               </Button>
             </Group>
           </div>

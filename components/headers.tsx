@@ -69,7 +69,7 @@ export default function HeaderAction() {
             <Link
                 key={link.label}
                 href={link.link}
-                className="transition-all duration-500 text-white hover:text-secondary"
+                className="transition-all duration-500 text-white hover:text-secondary scroll-smooth"
             >
                 {link.label}
             </Link>
