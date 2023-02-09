@@ -3,66 +3,66 @@
 export const SKILLS = [
     {
         name: "Python",
-        logo: "/assets/python.png",
+        logo: "/assets/skills/python.png",
     },
     {
         name: "Java",
-        logo: "/assets/java.png",
+        logo: "/assets/skills/java.png",
     },
     {
         name: "Docker",
-        logo: "/assets/docker.webp",
+        logo: "/assets/skills/docker.webp",
     },
     {
         name: "Git",
-        logo: "/assets/git.png",
+        logo: "/assets/skills/git.png",
     },
     {
         name: "PostgreSQL",
-        logo: "/assets/postgre.png",
+        logo: "/assets/skills/postgre.png",
     },
     {
         name: "MySQL",
-        logo: "/assets/mysql.png",
+        logo: "/assets/skills/mysql.png",
     },
     {
         name: "Elastic",
-        logo: "/assets/elasticsearch.svg",
+        logo: "/assets/skills/elasticsearch.svg",
     },
     {
         name: "Kibana",
-        logo: "/assets/kibana.png",
+        logo: "/assets/skills/kibana.png",
     },
     {
         name: "C",
-        logo: "/assets/c.png",
+        logo: "/assets/skills/c.png",
     },
     {
         name: "R",
-        logo: "/assets/R.png",
+        logo: "/assets/skills/R.png",
     },
     {
         name: "TypeScript",
-        logo: "/assets/typescript.png",
+        logo: "/assets/skills/typescript.png",
     },
     {
         name: "React",
-        logo: "/assets/react.png",
+        logo: "/assets/skills/react.png",
     },
     {
         name: "NextJS",
-        logo: "/assets/nextJS.png",
+        logo: "/assets/skills/nextJS.png",
     },
     {
         name: "Tailwind",
-        logo: "/assets/tailwind.png",
+        logo: "/assets/skills/tailwind.png",
     },
     {
         name: "CSS",
-        logo: "/assets/css.png",
+        logo: "/assets/skills/css.png",
     },
     {
         name: "Mantine",
-        logo: "/assets/mantine.png",
+        logo: "/assets/skills/mantine.png",
     },
 ]
