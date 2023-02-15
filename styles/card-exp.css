@@ -1,6 +1,6 @@
 .container {
     --background: linear-gradient(to left, #6ee7b7 0%, #6ee7b7 50%);
-    width: 300px;
+    width: 310px;
     height: 324px;
     padding: 4px;
     border-radius: 5px;
@@ -13,7 +13,7 @@
   
   .container .box {
     position: relative;
-    width: 300px;
+    width: 310px;
     height: 314px;
     background: #333;
     display: -webkit-box;

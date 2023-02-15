@@ -32,23 +32,22 @@ export default function Home() {
         
         <main className='bg-primary pt-[95px]'>
           <About></About>
-          <div className='py-16 space-y-10'>
-            <div id="experiences" className='text-center tracking-wider text-title text-white'>
-              Experiences
+          <div className='py-14'>
+            <div id="experiences" className='text-center font-bold tracking-wider text-title text-white'>
+              <b className='text-secondary'>E</b>xperiences
               <Experiences></Experiences> 
             </div>
           </div>
           <div className="relative z-50 mx-auto max-w-5xl space-y-10">
-            <div id='skills' className="text-center tracking-wider text-title text-white">
+            <div id='skills' className="text-center font-bold tracking-wider text-title text-white">
                   Skills and
                   <b className="text-secondary text-title"> Formations</b>
               </div>
-            <div className="flex flex-wrap w-full px-10 justify-center items-center gap-x-10 gap-y-20">
+            <div className="flex flex-wrap text-white w-full px-10 justify-center items-center gap-x-10 gap-y-20">
               <Skills></Skills>
-              <Formations></Formations>
             </div>
             <div className='py-16 space-y-10'>
-              <div id='contact' className="text-center text-title tracking-wider text-white">
+              <div id='contact' className="text-center font-bold text-title tracking-wider text-white">
                   Contact
                   <b className="text-secondary text-title"> Form</b>
               </div>

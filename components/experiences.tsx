@@ -20,26 +20,48 @@ function FadeRight({children} : any) {
     );
   }
 
+function FadeIn({children} : any) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    return (
+      <section ref={ref}>
+        <motion.div
+          style={{
+            opacity: isInView ? 1 : 0,
+            transition: "all 2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+        >
+          {children}
+        </motion.div>
+      </section>
+    );
+  }
+
 export default function Experiences(){
     return(
         <>
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-20 py-20">
-            <div className="flex flex-row space-x-20">
-                <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                    <a href="https://tehtris.com/en/" target={"_blank"}>
-                        <img src="/assets/companies/tehtris.png" className="z-50">
-                        </img>
-                    </a>
-                </div>
-                <div className="flex flex-col space-y-4">
-                    <div className="text-date text-secondary">
-                        OCT 2021 - JAN 2023 <br/> Bordeaux
+        <div className="flex flex-wrap mt-12 items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+            <FadeIn>
+                <div className="flex flex-row space-x-20">
+                    
+                        <a href="https://tehtris.com/en/" target={"_blank"}>
+                            <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+                                    <img src="/assets/companies/tehtris.png" className="z-50">
+                                    </img>
+                            </div>
+                        </a>
+                    
+                    <div className="flex flex-col space-y-4">
+                        <div className="text-date text-secondary">
+                            OCT 2021 - JAN 2023 <br/> Bordeaux
+                        </div>
+                        <div className="text-company font-bold uppercase">
+                            Tehtris
+                        </div>
                     </div>
-                    <div className="text-company font-bold uppercase">
-                        Tehtris
-                    </div>
                 </div>
-            </div>
+            </FadeIn>
             <FadeRight>
                 <div className="container duration-500 transition-all">
                     <div className="box">
@@ -59,23 +81,25 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-20 py-20">
-            <div className="flex flex-row space-x-20">
-                <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+            <FadeIn>
+                <div className="flex flex-row space-x-20">
                     <a href="https://kancoon.fr" target={"_blank"}>
-                        <img src="/assets/companies/kancoon.png" className="z-50">
-                        </img>
+                        <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+                                <img src="/assets/companies/kancoon.png" className="z-50">
+                                </img>
+                        </div>
                     </a>
-                </div>
-                <div className="flex flex-col space-y-4">
-                    <div className="text-date text-secondary">
-                        NOV 2022 - JAN 2023 <br/> Bordeaux
+                    <div className="flex flex-col space-y-4">
+                        <div className="text-date text-secondary">
+                            NOV 2022 - JAN 2023 <br/> Bordeaux
+                        </div>
+                        <div className="text-company font-bold uppercase">
+                            Kancoon
+                        </div>
                     </div>
-                    <div className="text-company font-bold uppercase">
-                        Kancoon
-                    </div>
                 </div>
-            </div>
+            </FadeIn>
             <FadeRight>
                 <div className="container duration-500 transition-all">
                     <div className="box">
@@ -98,23 +122,25 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-20 py-20">
-            <div className="flex flex-row space-x-20">
-                <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+            <FadeIn>
+                <div className="flex flex-row space-x-20">
                     <a href="https://atos.net/en/" target={"_blank"}>
-                        <img src="/assets/companies/atos.png" className="z-50">
-                        </img>
+                        <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+                                <img src="/assets/companies/atos.png" className="z-50">
+                                </img>
+                        </div>
                     </a>
-                </div>
-                <div className="flex flex-col space-y-4">
-                    <div className="text-date text-secondary">
-                        FEB 2021 - AUG 2021 <br/> Toulouse
+                    <div className="flex flex-col space-y-4">
+                        <div className="text-date text-secondary">
+                            FEB 2021 - AUG 2021 <br/> Toulouse
+                        </div>
+                        <div className="text-company font-bold uppercase">
+                            Atos
+                        </div>
                     </div>
-                    <div className="text-company font-bold uppercase">
-                        Atos
-                    </div>
                 </div>
-            </div>
+            </FadeIn>
             <FadeRight>
                 <div className="container duration-500 transition-all">
                     <div className="box">
@@ -134,24 +160,25 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-20 py-20">
-            <div className="flex flex-row space-x-20">
-                
-                <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+            <FadeIn>
+                <div className="flex flex-row space-x-20">
                     <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target={"_blank"}>
-                        <img src="/assets/companies/enseirb.png" className="z-50">
-                        </img>
+                        <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+                                <img src="/assets/companies/enseirb.png" className="z-50">
+                                </img>
+                        </div>
                     </a>
-                </div>
-                <div className="flex flex-col space-y-4">
-                    <div className="text-date text-secondary">
-                        SEP 2018 - FEB 2021 <br/> Bordeaux
+                    <div className="flex flex-col space-y-4">
+                        <div className="text-date text-secondary">
+                            SEP 2018 - FEB 2021 <br/> Bordeaux
+                        </div>
+                        <div className="text-company font-bold uppercase">
+                            Enseirb
+                        </div>
                     </div>
-                    <div className="text-company font-bold uppercase">
-                        Enseirb
-                    </div>
                 </div>
-            </div>
+            </FadeIn>
             <FadeRight>
                 <div className="container duration-500 transition-all">
                     <div className="box">
