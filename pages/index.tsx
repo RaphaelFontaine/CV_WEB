@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import HeaderAction from '@/components/headers'
 import About from '@/components/about'
-import Formations from '@/components/formations'
 import Experiences from '@/components/experiences'
 import GetInTouchSimple from '@/components/contact'
 import Icon from '@/components/icon'
 import SocialMedia from '@/components/social-media'
 import { useEffect, useState } from 'react'
 import Skills from '@/components/skills'
+import Portfolio from '@/components/portfolio'
 
 export default function Home() {
   const [isMounted, setisMounted] = useState(false);
@@ -43,9 +43,10 @@ export default function Home() {
                   Skills and
                   <b className="text-secondary text-title"> Formations</b>
               </div>
-            <div className="flex flex-wrap text-white w-full px-10 justify-center items-center gap-x-10 gap-y-20">
+            <div className="flex flex-wrap text-white w-full px-10 justify-center items-center gap-x-10 gap-y-20 pb-28">
               <Skills></Skills>
             </div>
+            <Portfolio/>
             <div className='py-16 space-y-10'>
               <div id='contact' className="text-center font-bold text-title tracking-wider text-white">
                   Contact
