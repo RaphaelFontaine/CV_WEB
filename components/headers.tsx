@@ -109,10 +109,48 @@ function Phone_menu_item({link} : {link : Link}){
             <div className='flex border-b-2 text-white border-b-white hover:bg-white/20'>
                 <Link 
                     href={link.link}
-                    target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
+                    target={link.label}
                     className="flex item-center pl-4 py-3 hover:text-secondary transition-all">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>
     )
 }
+
+// function Phone_menu_item({link} : {link : Link}){
+//     const [opened_phone, setOpened] = useState(false);
+//     return(
+//         <>
+//             <div className='flex border-b-2 text-white border-b-white hover:bg-white/20'>
+//                 <Link 
+//                     href={link.link}
+//                     target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
+//                     className={`flex item-center pl-4 py-3 hover:text-green-2 transition-all ${link.label == 'Stores' ? "cursor-default" : "cursor-pointer" }`}>
+//                         {link.label.toUpperCase()}
+//                 </Link> 
+//                 {
+//                     link?.links && 
+//                     <button 
+//                         className='ml-auto px-4 py-3 border-2 border-black hover:bg-footer-grey hover:text-green-2 transition-all'
+//                         onClick={() => setOpened(!opened_phone)}>
+//                             {opened_phone ? '-' : '+'}
+//                     </button>
+//                 }
+//             </div>
+//             {link?.links && 
+//                 <Collapse in={opened_phone} className='ml-auto px-4 hover:text-green-2 transition-all'>
+//                     {link.links.map(sublink => 
+//                         <Link
+//                             key={sublink.label}
+//                             href={sublink.link}
+//                             className="flex item-center pl-6 py-3 border-b-2 border-white hover:bg-white/20 transition-all duration-500 text-white hover:text-green-2 text-sm font-police"
+//                             target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
+//                         >
+//                             {sublink.label.toUpperCase()}
+//                         </Link>    
+//                     )}
+//                 </Collapse>
+//             }
+//         </>
+//     )
+// }
