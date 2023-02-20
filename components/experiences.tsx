@@ -67,13 +67,13 @@ export default function Experiences(){
                     <div className="box">
                         <div className="content text-content">
                             <li>
-                                Conception en <b className="text-secondary"> python</b> d'un outil pour appliquer des configurations sur <b className="text-secondary"> ElasticSearch/Kibana</b> de façon automatisé.
+                                Designing a tool in <b className="text-secondary">Python</b> for applying configurations on <b className="text-secondary">ElasticSearch/Kibana</b> in an automated way.
                             </li>
                             <li>
-                                Gestion d'une base de donnée non-relationnelle <b className="text-secondary"> ElasticSearch</b> : création de pipelines, rétention des données, formatage des données.
+                                Managing a non-relational database <b className="text-secondary">ElasticSearch</b>: creating pipelines, data retention, data formatting.
                             </li>
                             <li>
-                                Création et optimisation d'outil de visualisation de données (dashboards, visualisations) sur <b className="text-secondary"> Kibana</b>.
+                                Creating and optimizing data visualization tools (dashboards, visualizations) on <b className="text-secondary">Kibana</b>.
                             </li>
                         </div>
                     </div>
@@ -105,13 +105,13 @@ export default function Experiences(){
                     <div className="box">
                         <div className="content text-content">
                             <li>
-                                Conception d'un site web front-end
+                                Design of a front-end website.
                             </li>
                             <li>
-                                Création du site en langage <b className="text-secondary"> TypeScript </b> avec le framework <b className="text-secondary"> NextJS</b>.
+                                Creation of the website using <b className="text-secondary">TypeScript</b> language with the<b className="text-secondary">NextJS</b> framework.
                             </li>
                             <li>
-                                Site disponible ici :&nbsp; 
+                                Site available here :&nbsp; 
                                 <a className="text-secondary" href="https://kancoon.fr" target={"_blank"}>
                                     kancoon.fr
                                 </a>
@@ -146,13 +146,13 @@ export default function Experiences(){
                     <div className="box">
                         <div className="content text-content">
                             <li>
-                                Traitement en <b className="text-secondary"> python</b> de données sur des émissions de carbone dans le cadre d'un projet pour la COP26 (<b className="text-secondary"> bash</b>, <b className="text-secondary"> netcdf</b> ...)
+                                <b className="text-secondary">Python</b> data processing for carbon emissions data as part of a project for COP26. (<b className="text-secondary"> bash</b>, <b className="text-secondary"> netcdf</b> ...)
                             </li>
                             <li>
-                                Visualisation des données à travers une interface web (<b className="text-secondary"> javascript</b>, <b className="text-secondary"> leaflet</b>, <b className="text-secondary"> ChartJS</b>)
+                                Web interface creation for data visualization. (<b className="text-secondary"> javascript</b>, <b className="text-secondary"> leaflet</b>, <b className="text-secondary"> ChartJS</b>)
                             </li>
                             <li>
-                                Travail dans un environnement cloud : création de machine virtuelle, extension de disque, gestion des ressources en fonction des besoins (<b className="text-secondary">docker</b>, <b className="text-secondary"> kubernetes</b>)
+                                Work in a cloud environment: virtual machines creation, disk extension, resource management based on needs. (<b className="text-secondary">docker</b>, <b className="text-secondary"> kubernetes</b>)
                             </li>
                         </div>
                     </div>
@@ -184,13 +184,13 @@ export default function Experiences(){
                     <div className="box">
                         <div className="content text-content">
                             <li>
-                                Projet de Gestion de donnéesConception et Gestion d'une base de données MySQL pour gérer les livraisons d'une entreprise avec un serveur Apache
+                                Data Management Project: Designing and Managing a <b className="text-secondary">MySQL</b> Database to Handle Deliveries for a Company Using an <b className="text-secondary">Apache</b> Server.
                             </li>
                             <li>
-                                Projet d'analyse de données : Prédire la température critique d'un super-conducteur en utilisant plusieurs méthodes : ACP, régression linéaire, régression polynomiale, splines, forêts aléatoires (R Studio)
+                                Data Analysis Project: Predicting the critical temperature of a superconductor using multiple methods including PCA, linear regression, polynomial regression, splines, and random forests (<b className="text-secondary">R Studio</b>)
                             </li>
                             <li>
-                            Learnt and used most of the popular programming languages as C, Java, Python, Javascript...
+                                Learnt and used most of the popular programming languages as <b className="text-secondary">C</b>, <b className="text-secondary">Java</b>, <b className="text-secondary">Python</b>, <b className="text-secondary">Javascript</b>...
                             </li>
                         </div>
                     </div>
