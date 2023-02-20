@@ -24,7 +24,7 @@ export default function Portfolio(){
         <div className="flex flex-col items-center justify-center space-y-28">
             <FadeIn>
                 <div id="portfolio" className='text-center font-bold tracking-wider text-title text-white'>
-                    My Creative<b className='text-secondary'>Portfolio</b>
+                    My Creative <b className='text-secondary'>Portfolio</b>
                 </div>
             </FadeIn>
             <FadeIn>

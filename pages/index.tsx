@@ -40,9 +40,8 @@ export default function Home() {
           </div>
           <div className="relative z-50 mx-auto max-w-5xl space-y-10">
             <div id='skills' className="text-center font-bold tracking-wider text-title text-white">
-                  Skills and
-                  <b className="text-secondary text-title"> Formations</b>
-              </div>
+              <b className="text-secondary text-title">S</b>kills
+            </div>
             <div className="flex flex-wrap text-white w-full px-10 justify-center items-center gap-x-10 gap-y-20 pb-28">
               <Skills></Skills>
             </div>

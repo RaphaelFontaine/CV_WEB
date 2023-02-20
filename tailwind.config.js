@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'phone': '500px',
+    },
     colors: {
       'primary': "#232323",
       'secondary': "#6ee7b7",

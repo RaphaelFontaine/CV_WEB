@@ -41,16 +41,15 @@ function FadeIn({children} : any) {
 export default function Experiences(){
     return(
         <>
-        <div className="flex flex-wrap mt-12 items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+        <div className="flex flex-wrap mt-12 items-center justify-center w-full px-10 gap-x-60 gap-y-10 py-10">
             <FadeIn>
                 <div className="flex flex-row space-x-20">
-                    
-                        <a href="https://tehtris.com/en/" target={"_blank"}>
-                            <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                                    <img src="/assets/companies/tehtris.png" className="z-50">
-                                    </img>
-                            </div>
-                        </a>
+                    <a href="https://tehtris.com/en/" target={"_blank"}>
+                        <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
+                                <img src="/assets/companies/tehtris.png" className="z-50">
+                                </img>
+                        </div>
+                    </a>
                     
                     <div className="flex flex-col space-y-4">
                         <div className="text-date text-secondary">
@@ -81,7 +80,7 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+        <div className="flex flex-wrap items-center justify-center w-full px-10 gap-x-60 gap-y-10 py-10">
             <FadeIn>
                 <div className="flex flex-row space-x-20">
                     <a href="https://kancoon.fr" target={"_blank"}>
@@ -122,7 +121,7 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+        <div className="flex flex-wrap items-center justify-center w-full px-10 gap-x-60 gap-y-10 py-10">
             <FadeIn>
                 <div className="flex flex-row space-x-20">
                     <a href="https://atos.net/en/" target={"_blank"}>
@@ -160,7 +159,7 @@ export default function Experiences(){
             </FadeRight>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center w-full space-x-60 px-10 gap-x-10 gap-y-10 py-10">
+        <div className="flex flex-wrap items-center justify-center w-full px-10 gap-x-60 gap-y-10 py-10">
             <FadeIn>
                 <div className="flex flex-row space-x-20">
                     <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target={"_blank"}>
@@ -180,7 +179,7 @@ export default function Experiences(){
                 </div>
             </FadeIn>
             <FadeRight>
-                <div className="container duration-500 transition-all">
+                <div className="container flex items-center justify-center duration-500 transition-all">
                     <div className="box">
                         <div className="content text-content">
                             <li>
