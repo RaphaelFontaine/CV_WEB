@@ -16,10 +16,6 @@ interface Link {
 
 const links : Link[]=[
     {
-        link : "#about",
-        label : "About"
-    },
-    {
         link : "#experiences",
         label : "Experiences",
     },
@@ -99,20 +95,22 @@ export default function HeaderAction() {
                     onClick={() => setOpened(!opened)}
                 />
             </div>
-            <Collapse in={opened} className="ft:hidden mx-12 flex flex-col hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll">
+            <Collapse in={opened} className="ft:hidden right-[5%] absolute mt-24 flex-col bg-fifth hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll">
                 {links.map(link => <Phone_menu_item link={link}/>)}
             </Collapse>
         </div>
     );
 }
 
+
+
 function Phone_menu_item({link} : {link : Link}){
     return(
-            <div className='flex border-b-2 text-white hover:text-secondary border-b-white transition-all duration-500'>
+            <div className='flex border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
                 <Link 
                     href={link.link}
                     target={link.label}
-                    className="flex item-center pl-4 py-3">
+                    className="flex items-center justify-center mx-4 my-3">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>
