@@ -43,12 +43,14 @@ export default function Skills(){
             <section ref={ref}>
                 <motion.div
                     className="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-lg px-2"
-                    variants={{
-                    visible: {
-                        transition: { staggerChildren: 0.1, delayChildren: 0.3 },
-                    },
-                    hidden: {},
-                    }}
+                    variants={
+                        {
+                        visible: {
+                            transition: { staggerChildren: 0.1, delayChildren: 0.3 },
+                        },
+                        hidden: {},
+                        }
+                    }
                     initial={isInView ? "visible" : "hidden"}
                     animate={isInView ? "visible" : "hidden"}
                 >

@@ -78,8 +78,12 @@ export default function Home() {
                 </div>
               </FadeIn>
               <div className='flex flex-wrap items-center justify-center gap-10'>
-                <GetInTouchSimple></GetInTouchSimple>
-                <Icon></Icon>
+                <FadeIn>
+                  <GetInTouchSimple/>
+                </FadeIn>
+                <FadeIn>
+                  <Icon/>
+                </FadeIn>
               </div> 
             </div>
           </div>
