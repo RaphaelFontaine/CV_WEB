@@ -87,8 +87,8 @@ export default function HeaderAction() {
                 <div className='hidden ft:flex font-normal items-center justify-center space-x-8 h-full'>
                     {items}
                 </div>
-                <div className='absolute right-0'>
-                    <a href="/assets/resume.pdf" className='flex justify-center mr-10 items-center w-14 h-14' download>
+                <div className='absolute ft:right-0 mx-auto'>
+                    <a href="/assets/resume.pdf" className='flex justify-center ft:mr-10 items-center w-14 h-14' download>
                         <BsFillFileEarmarkPdfFill className='text-white hover:text-secondary transition-all duration-500 w-6 h-auto cursor-pointer'/>
                     </a>
                 </div>
