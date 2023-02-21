@@ -10,7 +10,10 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'ft': '765px',
       'phone': '500px',
+      'lg': '1070px',
+      'bp': '930px',
     },
     colors: {
       'primary': "#232323",

@@ -28,6 +28,10 @@ const links : Link[]=[
         label : "Skills"
     },
     {
+        link : "#portfolio",
+        label : "Portfolio"
+    },
+    {
         link : "#contact",
         label : "Contact",
     }
@@ -79,78 +83,39 @@ export default function HeaderAction() {
   
     return (
         <div className={`flex fixed backdrop-blur-xl z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
-            <div className='flex items-center h-24 max-w-6xl mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
+            <div className='flex items-center h-24 min-w-3xl px-10 mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
                 <Link href={"/"}>
                     <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
                 </Link>
-                <div className='hidden lg:flex items-center space-x-8 ml-20 h-full'>
+                <div className='hidden ft:flex font-semibold items-center space-x-8 ml-20 h-full'>
                     {items}
                 </div>
-                <a href="/assets/resume.pdf" className='w-14 h-14 text-white group-hover:text-secondary justify-center items-center flex transition-all duration-500' download>
-                    <BsFillFileEarmarkPdfFill className='text-white w-6 h-auto hover:text-secondary transition-all duration-500 cursor-pointer'/>
+                <a href="/assets/resume.pdf" className='flex justify-center mr-10 items-center w-14 h-14' download>
+                    <BsFillFileEarmarkPdfFill className='text-white hover:text-secondary transition-all duration-500 w-6 h-auto cursor-pointer'/>
                 </a>
                 <Burger
-                    className='lg:hidden ml-auto mr-4 border-4 border-black'
-                    color={opened ? '#ADC906' : 'white'}
+                    className='ft:hidden ml-auto mr-4 border-4 border-black'
+                    color={opened ? '#6ee7b7' : 'white'}
                     opened={opened}
                     onClick={() => setOpened(!opened)}
                 />
             </div>
-            <Collapse in={opened} className="lg:hidden mx-12 flex flex-col bg-footer-grey space-x-8 max-h-[85vh] overflow-y-scroll">
+            <Collapse in={opened} className="ft:hidden mx-12 flex flex-col hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll">
                 {links.map(link => <Phone_menu_item link={link}/>)}
             </Collapse>
         </div>
     );
 }
 
-
 function Phone_menu_item({link} : {link : Link}){
     return(
-            <div className='flex border-b-2 text-white border-b-white hover:bg-white/20'>
+            <div className='flex border-b-2 text-white hover:text-secondary border-b-white transition-all duration-500'>
                 <Link 
                     href={link.link}
                     target={link.label}
-                    className="flex item-center pl-4 py-3 hover:text-secondary transition-all">
+                    className="flex item-center pl-4 py-3">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>
     )
 }
-
-// function Phone_menu_item({link} : {link : Link}){
-//     const [opened_phone, setOpened] = useState(false);
-//     return(
-//         <>
-//             <div className='flex border-b-2 text-white border-b-white hover:bg-white/20'>
-//                 <Link 
-//                     href={link.link}
-//                     target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
-//                     className={`flex item-center pl-4 py-3 hover:text-green-2 transition-all ${link.label == 'Stores' ? "cursor-default" : "cursor-pointer" }`}>
-//                         {link.label.toUpperCase()}
-//                 </Link> 
-//                 {
-//                     link?.links && 
-//                     <button 
-//                         className='ml-auto px-4 py-3 border-2 border-black hover:bg-footer-grey hover:text-green-2 transition-all'
-//                         onClick={() => setOpened(!opened_phone)}>
-//                             {opened_phone ? '-' : '+'}
-//                     </button>
-//                 }
-//             </div>
-//             {link?.links && 
-//                 <Collapse in={opened_phone} className='ml-auto px-4 hover:text-green-2 transition-all'>
-//                     {link.links.map(sublink => 
-//                         <Link
-//                             key={sublink.label}
-//                             href={sublink.link}
-//                             className="flex item-center pl-6 py-3 border-b-2 border-white hover:bg-white/20 transition-all duration-500 text-white hover:text-green-2 text-sm font-police"
-//                             target={link.label == 'Menuiserie IZY' ? "_blank" : "_self"}
-//                         >
-//                             {sublink.label.toUpperCase()}
-//                         </Link>    
-//                     )}
-//                 </Collapse>
-//             }
-//         </>
-//     )
-// }
