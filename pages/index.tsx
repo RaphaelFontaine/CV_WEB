@@ -90,7 +90,7 @@ export default function Home() {
         </main>
         </>
       :
-      <div className="absolute bg-primary loader">
+      <div className="absolute bg-primary z-[100] loader">
           <div className="face">
               <div className="circle"></div>
           </div>

@@ -66,10 +66,6 @@ export default function HeaderAction() {
     const [opened, setOpened] = useState(false);
     const items = links.map((link) => {
         return (
-            <>
-            <div className="loader">
-                <div className="circle"></div>
-            </div>
             <Link
                 key={link.label}
                 href={link.link}
@@ -77,22 +73,25 @@ export default function HeaderAction() {
             >
                 {link.label}
             </Link>
-            </>
         );
     });
   
     return (
         <div className={`flex fixed backdrop-blur-xl z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
-            <div className='flex items-center h-24 min-w-3xl px-10 mx-auto space-x-40 bg-primary border-b-[1px] border-secondary '>
-                <Link href={"/"}>
-                    <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
-                </Link>
-                <div className='hidden ft:flex font-semibold items-center space-x-8 ml-20 h-full'>
+            <div className='flex items-center justify-center w-full h-24 px-10 bg-primary border-b-[1px] border-secondary '>
+                <div className='absolute left-10'>
+                    <Link href={"/"}>
+                        <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
+                    </Link>
+                </div>
+                <div className='hidden ft:flex font-normal items-center justify-center space-x-8 h-full'>
                     {items}
                 </div>
-                <a href="/assets/resume.pdf" className='flex justify-center mr-10 items-center w-14 h-14' download>
-                    <BsFillFileEarmarkPdfFill className='text-white hover:text-secondary transition-all duration-500 w-6 h-auto cursor-pointer'/>
-                </a>
+                <div className='absolute right-0'>
+                    <a href="/assets/resume.pdf" className='flex justify-center mr-10 items-center w-14 h-14' download>
+                        <BsFillFileEarmarkPdfFill className='text-white hover:text-secondary transition-all duration-500 w-6 h-auto cursor-pointer'/>
+                    </a>
+                </div>
                 <Burger
                     className='ft:hidden ml-auto mr-4 border-4 border-black'
                     color={opened ? '#6ee7b7' : 'white'}
