@@ -33,14 +33,14 @@ export function ContactForm() {
       setSubmitted(true);
       
     } catch (error) {
-      console.log('ENvoi error')
+      console.log('Envoi error')
       toast.error('An error occurred while submitting the form.\nPlease contact 07 62 88 80 22')
     }
 
     setIsSubmitting(false);
   };
   return (
-    <div className='bg-light-grey border-2 ft:w-auto border-secondary hover:border-green transition-all duration-500 rounded-xl'>
+    <div className='border-2 ft:w-[auto] border-secondary hover:border-green transition-all duration-500 rounded-xl'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="phone:w-[50vw]">
             <div className='bg-fifth border-2 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] border-secondary transition-all duration-500 rounded-xl'>
