@@ -1,6 +1,8 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { SKILLS } from "@/utils/skills"
+import { useInView } from 'react-intersection-observer';
+
 
 interface SkillProps {
     name: string,
@@ -29,23 +31,28 @@ export function Skill(props: SkillProps) {
   
 
 
-  export default function Skills() {
+export default function Skills() {
+    const { ref, inView } = useInView({
+      threshold: 0.2, // Déclenche l'animation lorsque 20% de la section est dans la vue
+      triggerOnce: true, // Désactive la détection une fois la section visible
+    });
+  
     return (
-      <div id="formations">
+      <div id="formations" ref={ref}>
         <motion.div
           className="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-lg px-2"
           variants={{
             visible: {
-              transition: { staggerChildren: 0.1, delayChildren: 0.3 }
+              transition: { staggerChildren: 0.1, delayChildren: 0.3 },
             },
-            hidden: {}
+            hidden: {},
           }}
-          initial="hidden"
-          animate="visible"
+          initial={inView ? 'visible' : 'hidden'} // Commence l'animation si la section est visible
+          animate={inView ? 'visible' : 'hidden'} // Continue l'animation si la section est visible
         >
-          {SKILLS.map((formation: any, index: any) => (
+          {SKILLS.map((skill, index) => (
             <motion.div variants={skillVariants} key={index}>
-              <Skill name={formation.name} logo={formation.logo} />
+              <Skill name={skill.name} logo={skill.logo} />
             </motion.div>
           ))}
         </motion.div>
