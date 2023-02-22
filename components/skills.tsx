@@ -33,12 +33,12 @@ export function Skill(props: SkillProps) {
 
 export default function Skills() {
     const { ref, inView } = useInView({
-      threshold: 0.2, // Déclenche l'animation lorsque 20% de la section est dans la vue
-      triggerOnce: true, // Désactive la détection une fois la section visible
+      threshold: 0.2, 
+      triggerOnce: true,
     });
   
     return (
-      <div id="formations" ref={ref}>
+      <div className="mt-12" id="formations" ref={ref}>
         <motion.div
           className="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-lg px-2"
           variants={{
