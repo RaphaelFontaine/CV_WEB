@@ -77,7 +77,7 @@ export default function HeaderAction() {
             <div className='flex items-center justify-center w-full h-24 px-10 bg-primary border-b-[1px] border-secondary '>
                 <div className='absolute left-10'>
                     <Link href={"/"}>
-                        <TbLetterR className='rounded-full border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
+                        <TbLetterR className='rounded-full scroll-smooth border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
                     </Link>
                 </div>
                 <div className='hidden ft:flex font-normal items-center justify-center space-x-8 h-full'>
@@ -110,7 +110,7 @@ function Phone_menu_item({link} : {link : Link}){
                 <Link 
                     href={link.link}
                     target={link.label}
-                    className="flex items-center justify-center mx-4 my-3">
+                    className="flex items-center justify-center mx-4 my-3 scroll-smooth">
                         {link.label.toUpperCase()}
                 </Link> 
             </div>
