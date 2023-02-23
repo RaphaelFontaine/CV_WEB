@@ -36,15 +36,13 @@ export function ContactForm() {
       console.log('Envoi error')
       toast.error('An error occurred while submitting the form.\nPlease contact 07 62 88 80 22')
     }
-
     setIsSubmitting(false);
   };
   return (
-    <div className='border-2 ft:w-[auto] border-secondary hover:border-green transition-all duration-500 rounded-xl'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="phone:w-[50vw]">
-            <div className='bg-fifth border-2 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] border-secondary transition-all duration-500 rounded-xl'>
-              <SimpleGrid className='px-10 pt-6 space-x-5' cols={2} mt="xl">
+        <div className="flex items-center justify-center px-10">
+            <div className='bg-fifth border-2 space-y-10 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] max-w-2xl border-secondary transition-all duration-500 rounded-xl'>
+              <SimpleGrid className='px-10 flex flex-wrap gap-10 items-center justify-center' cols={2} mt="xl">
                   <div>
                     <TextInput label="Name *" placeholder="Your name"
                       {...register('Nom', {
@@ -79,7 +77,7 @@ export function ContactForm() {
                     {errors.Email && <p className='text-secondary absolute text-skills'>{errors.Email.message}</p>}
                   </div>
               </SimpleGrid>
-              <SimpleGrid className='px-10 py-6 space-x-5' cols={2} mt="xl" >
+              <SimpleGrid className='px-10 flex flex-wrap gap-10 items-center justify-center' cols={2} mt="xl" >
                 <div>
                   <TextInput label="Phone number" placeholder="0611223344"
                     classNames={{
@@ -132,7 +130,6 @@ export function ContactForm() {
             </div>
         </div>
       </form> 
-    </div>
 
   );
 }
