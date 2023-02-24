@@ -87,8 +87,12 @@ export default function Home() {
               </div> 
             </div>
           </div>
+          <h1 className="py-4 text-white text-skills flex items-center justify-center text-xs">
+            Copyright © 2022 Raphael FONTAINE | All Rights Reserved
+          </h1>
         </main>
-        </>
+        
+      </>
       :
       <div className="absolute bg-primary z-[100] loader">
           <div className="face">

@@ -3,6 +3,8 @@ import {
     Burger,
     Button,
     Group,
+    Modal,
+    Overlay
 } from '@mantine/core';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -95,19 +97,28 @@ export default function HeaderAction() {
                     onClick={() => setOpened(!opened)}
                 />
             </div>
-            <Collapse in={opened} className="ft:hidden right-[5%] absolute mt-24 flex-col bg-fifth hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll">
+            <Modal 
+                classNames={{
+                    header: "bg-transparent opacity-0",
+                    modal: "bg-primary",
+                    body: "bg-primary"
+                }}
+                onClose={() => setOpened(false)} 
+                withCloseButton={false} 
+                opened={opened} 
+                className="ft:hidden right-[5%] absolute mt-24 flex-col bg-fifth hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll"
+            >
                 {links.map(link => <Phone_menu_item link={link}/>)}
-            </Collapse>
+            </Modal>
         </div>
     );
 }
 
 
-
 function Phone_menu_item({link} : {link : Link}){
     return(
-            <div className='flex border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
-                <Link 
+            <div className='flex items-center justify-center border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
+                <Link
                     href={link.link}
                     target={link.label}
                     className="flex items-center justify-center mx-4 my-3 scroll-smooth">
