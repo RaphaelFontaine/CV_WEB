@@ -119,8 +119,8 @@ function Phone_menu_item({link} : {link : Link}){
     return(
             <div className='flex items-center justify-center border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
                 <Link
+                    key={link.label}
                     href={link.link}
-                    target={link.label}
                     className="flex items-center justify-center mx-4 my-3 scroll-smooth">
                         {link.label.toUpperCase()}
                 </Link> 
