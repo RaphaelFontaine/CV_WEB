@@ -99,14 +99,18 @@ export default function HeaderAction() {
             </div>
             <Modal 
                 classNames={{
-                    header: "bg-transparent opacity-0",
+                    root: "bg-transparent",
+                    header: "bg-white ",
                     modal: "bg-primary",
                     body: "bg-primary"
                 }}
+                closeOnEscape={true}
+                closeOnClickOutside={true}
+                centered={true}
                 onClose={() => setOpened(false)} 
                 withCloseButton={false} 
                 opened={opened} 
-                className="ft:hidden right-[5%] absolute mt-24 flex-col bg-fifth hover:text-secondary space-x-8 max-h-[85vh] overflow-y-scroll"
+                className="ft:hidden absolute min-h-screen rounded-xl  flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
             >
                 {links.map(link => <Phone_menu_item link={link}/>)}
             </Modal>
@@ -121,7 +125,8 @@ function Phone_menu_item({link} : {link : Link}){
                 <Link
                     key={link.label}
                     href={link.link}
-                    className="flex items-center justify-center mx-4 my-3 scroll-smooth">
+                    className="flex items-center justify-center mx-4 my-3 scroll-smooth"
+                >
                         {link.label.toUpperCase()}
                 </Link> 
             </div>
