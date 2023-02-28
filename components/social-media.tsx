@@ -102,7 +102,7 @@ function FadeIn2({children} : any) {
 export default function SocialMedia(){
     return (
         
-            <div className="flex flex-col fixed bottom-0 z-50 left-8 space-y-8 items-center justify-center">
+            <div className="hidden ft:flex flex-col fixed bottom-0 z-50 left-8 space-y-8 items-center justify-center">
                 <FadeIn5>
                     <div>
                         <a href='tel:+33762888022'>
