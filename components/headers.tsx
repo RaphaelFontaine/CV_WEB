@@ -130,7 +130,7 @@ export default function HeaderAction() {
                 onClose={() => setOpened(false)} 
                 withCloseButton={false} 
                 opened={opened} 
-                className="ft:hidden relative min-h-screen rounded-3xl flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
+                className="ft:hidden flex scroll-smooth min-h-screen rounded-3xl flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
             >
                 {links.map(link => <Phone_menu_item link={link}/>)}
                 <div className='flex flex-row pt-8 gap-x-8 items-center justify-center'>
