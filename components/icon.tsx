@@ -3,7 +3,7 @@ import { BsTelephoneOutbound } from 'react-icons/bs'
 
 export default function Icon() {
     return (
-      <div className="flex flex-col gap-12 items-center justify-center text-white"> 
+      <div className="flex flex-col gap-6 items-center justify-center text-white"> 
         <a href="tel:+33251959400">
           <div className="card overflow-hidden duration-500 transition-all group">
               <div className='flex flex-col items-center justify-center space-y-6'>

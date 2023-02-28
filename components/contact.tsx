@@ -41,7 +41,7 @@ export function ContactForm() {
   return (
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex items-center justify-center px-10 ft:px-16">
-            <div className='bg-fifth border-2 space-y-10 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] max-w-2xl border-secondary transition-all duration-500 rounded-xl'>
+            <div className='bg-fourth border-2 space-y-10 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] max-w-2xl hover:border-secondary border-white transition-all duration-500 rounded-xl'>
               <SimpleGrid className='px-10 flex flex-wrap gap-10 items-center justify-center' cols={2} mt="xl">
                   <div>
                     <TextInput label="Name *" placeholder="Your name"
