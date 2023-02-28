@@ -74,8 +74,8 @@ export default function About(){
                     <h1 className="font-bold text-name text-white">
                         Raphael FONTAINE
                     </h1>
-                    <h2 className="text-third">
-                        I'm a french Data Engineer
+                    <h2 className="text-third max-w-lg">
+                        I'm a french Data Engineer who learn full stack development to build optimized solutions. I worked in the fields of cyber-security and aerospace.
                     </h2>
                     <FadeLeft>
                     <div className="flex flex-wrap items-center justify-center ft:items-start ft:justify-start gap-10 pt-20">
