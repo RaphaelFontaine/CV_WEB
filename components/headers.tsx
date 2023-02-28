@@ -99,7 +99,7 @@ export default function HeaderAction() {
             <div className='flex items-center justify-center w-full h-24 px-10 bg-primary border-b-[1px] border-secondary '>
                 <div className='absolute left-10'>
                     <Link href={"/"}>
-                        <TbLetterR className='rounded-full scroll-smooth border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary hover:scale-105 transition-all duration-500'/>
+                        <img src="/assets/header/photo.png" className='rounded-full scroll-smooth border-2 border-white w-20 h-20 hover:border-secondary transition-all duration-500'/>
                     </Link>
                 </div>
                 <div className='hidden ft:flex font-normal items-center justify-center space-x-8 h-full'>
@@ -130,7 +130,7 @@ export default function HeaderAction() {
                 onClose={() => setOpened(false)} 
                 withCloseButton={false} 
                 opened={opened} 
-                className="ft:hidden absolute min-h-screen rounded-xl flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
+                className="ft:hidden relative min-h-screen rounded-3xl flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
             >
                 {links.map(link => <Phone_menu_item link={link}/>)}
                 <div className='flex flex-row pt-8 gap-x-8 items-center justify-center'>
