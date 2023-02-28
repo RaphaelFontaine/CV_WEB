@@ -78,6 +78,21 @@ export default function HeaderAction() {
             </Link>
         );
     });
+
+    function Phone_menu_item({link} : {link : Link}){
+        return(
+                <div className='flex items-center justify-center border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
+                    <Link 
+                        onClick={() => setOpened(false)}
+                        key={link.label}
+                        href={link.link}
+                        className="flex items-center justify-center mx-4 my-3 scroll-smooth"
+                    >
+                            {link.label.toUpperCase()}
+                    </Link>
+                </div>
+        )
+    }
   
     return (
         <div className={`flex fixed backdrop-blur-xl z-[1000] ${ scrollDirection === "down" ? "-top-24" : "top-0"} w-full border-b-[1px] border-secondary h-24 bg-primary transition-all duration-500`}>
@@ -138,10 +153,10 @@ export default function HeaderAction() {
 }
 
 
-function Phone_menu_item({link} : {link : Link}){
+function Phone_menu_item({link} : {link : Link}, {setOpened} : {setOpened : any}){
     return(
             <div className='flex items-center justify-center border-b-2 text-white hover:bg-fourth hover:text-secondary border-b-white transition-all duration-500'>
-                <Link
+                <Link 
                     key={link.label}
                     href={link.link}
                     className="flex items-center justify-center mx-4 my-3 scroll-smooth"
