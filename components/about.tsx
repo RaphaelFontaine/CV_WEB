@@ -67,7 +67,7 @@ export default function About(){
                     <BackgroundAnimation/>
                 </div>
                 
-                <div className="flex flex-col justify-center h-screen pb-14 max-w-5xl mx-auto z-50 px-6">
+                <div className="flex flex-col ml-auto ft:ml-16 justify-center h-screen pb-14 max-w-5xl mx-auto z-50 px-6">
                     <h1 className="text-secondary">
                         Hi, my name is
                     </h1>
