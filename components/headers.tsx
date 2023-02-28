@@ -10,6 +10,10 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 import { TbLetterR } from 'react-icons/tb';
+import { SlSocialLinkedin } from 'react-icons/sl';
+import { FiGithub } from'react-icons/fi';
+import { GoMail } from'react-icons/go';
+import { BsTelephoneOutbound } from 'react-icons/bs'
 
 interface Link {
     link: string;
@@ -62,6 +66,7 @@ function useScrollDirection() {
 export default function HeaderAction() {
     const scrollDirection = useScrollDirection();
     const [opened, setOpened] = useState(false);
+    
     const items = links.map((link) => {
         return (
             <Link
@@ -100,7 +105,7 @@ export default function HeaderAction() {
             <Modal 
                 classNames={{
                     root: "bg-transparent",
-                    header: "bg-white ",
+                    header: "bg-white",
                     modal: "bg-primary",
                     body: "bg-primary"
                 }}
@@ -110,9 +115,23 @@ export default function HeaderAction() {
                 onClose={() => setOpened(false)} 
                 withCloseButton={false} 
                 opened={opened} 
-                className="ft:hidden absolute min-h-screen rounded-xl  flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
+                className="ft:hidden absolute min-h-screen rounded-xl flex-col hover:text-secondary max-h-[85vh] overflow-y-scroll"
             >
                 {links.map(link => <Phone_menu_item link={link}/>)}
+                <div className='flex flex-row pt-8 gap-x-8 items-center justify-center'>
+                    <a href='tel:+33762888022'>
+                        <BsTelephoneOutbound className="w-5 h-5 text-white hover:text-secondary transition-all duration-500"/>
+                    </a>
+                    <a href='mailto:raphaelfontaine.pro@gmail.com'>
+                        <GoMail className="w-6 h-6 text-white hover:text-secondary transition-all duration-500"/>
+                    </a>
+                    <a href='https://github.com/RaphaelFontaine' target='_blank'>
+                        <FiGithub className="relative w-6 h-6 text-white hover:text-secondary transition-all duration-500"/>
+                    </a>
+                    <a href='https://www.linkedin.com/in/raphael-fontaine-2622321b8/' target='_blank'>
+                        <SlSocialLinkedin className="w-5 h-5 text-white hover:text-secondary transition-all duration-500"/>
+                    </a>
+                </div>
             </Modal>
         </div>
     );
@@ -128,7 +147,7 @@ function Phone_menu_item({link} : {link : Link}){
                     className="flex items-center justify-center mx-4 my-3 scroll-smooth"
                 >
                         {link.label.toUpperCase()}
-                </Link> 
+                </Link>
             </div>
     )
 }
