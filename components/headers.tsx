@@ -99,7 +99,9 @@ export default function HeaderAction() {
             <div className='flex items-center justify-center w-full h-24 px-10 bg-primary border-b-[1px] border-secondary '>
                 <div className='absolute left-10'>
                     <Link href={"/"}>
-                        <img src="/assets/header/photo.png" className='rounded-full scroll-smooth border-2 border-white w-20 h-20 hover:border-secondary transition-all duration-500'/>
+                        <div className='rounded-full flex items-center justify-center scroll-smooth border-2 hover:border-secondary border-white w-7 h-7 hover:text-secondary transition-all duration-500'>
+                            R
+                        </div>
                     </Link>
                 </div>
                 <div className='hidden ft:flex font-normal items-center justify-center space-x-8 h-full'>
