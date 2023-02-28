@@ -120,8 +120,7 @@ export default function HeaderAction() {
             <Modal 
                 classNames={{
                     root: "bg-transparent",
-                    header: "bg-white",
-                    modal: "bg-primary",
+                    modal: "bg-primary border-2 border-white",
                     body: "bg-primary"
                 }}
                 closeOnEscape={true}
