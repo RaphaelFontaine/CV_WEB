@@ -51,7 +51,6 @@ function useScrollDirection() {
         if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
           setScrollDirection(direction);
         }
-        console.log(scrollDirection)
         lastScrollY = scrollY > 0 ? scrollY : 0;
       };
       window.addEventListener("scroll", updateScrollDirection); // add event listener

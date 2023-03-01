@@ -1,6 +1,6 @@
 import { Button, Group, SimpleGrid, Textarea, TextInput } from '@mantine/core';
 import React, { useState } from 'react';
-import { toast } from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 
@@ -26,11 +26,10 @@ export function ContactForm() {
     setIsSubmitting(true);
     try {
       // Utilisation d'axios pour envoyer le formulaire à Formsprée
-      toast.success('The form has been submitted successfully!')
       await axios.post('https://formspree.io/f/xnqydjav', data);
-      console.log('ENvoi eOK')
-      toast.success('The form has been submitted successfully!')
+      console.log('Envoi OK')
       setSubmitted(true);
+      toast.success('The form has been submitted successfully!');
       
     } catch (error) {
       console.log('Envoi error')
@@ -39,6 +38,14 @@ export function ContactForm() {
     setIsSubmitting(false);
   };
   return (
+    <>
+    <div className='z-[2000]'>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
+    </div>
+    
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex items-center justify-center px-10 ft:px-16">
             <div className='bg-fourth border-2 space-y-10 shadow-[inset_0_-2px_15px_rgba(0,0,0,0.6)] max-w-2xl hover:border-secondary border-white transition-all duration-500 rounded-xl'>
@@ -84,17 +91,9 @@ export function ContactForm() {
                       "input": "focus:border-secondary border-2",
                       'label' : "text-white"
                     }}
-                    className='focus:border-secondary'
-                    {...register('Téléphone', {
-                      required: 'Please enter a phone number',
-                      pattern: {
-                        value: phoneRegex,
-                        message: 'Please enter a valid phone number',
-                      },
-                      validate: (value) =>
-                        value.trim() !== '' ||
-                        'Please enter a valid phone number',
-                    })}
+                    className='hover:border-secondary'
+                    {...register('Téléphone')}
+                    error={errors.Téléphone?.message}
                   />
                   {errors.Téléphone && <p className='text-secondary absolute text-skills'>{errors.Téléphone.message}</p>}
                   </div>
@@ -130,7 +129,7 @@ export function ContactForm() {
             </div>
         </div>
       </form> 
-
+    </>
   );
 }
 
