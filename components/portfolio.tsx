@@ -33,7 +33,7 @@ export default function Portfolio(){
                         <div className="portfolio2">
                             <div className="portfolio3">
                                 <a className="cursor-pointer" href="https://kancoon.fr" target={"_blank"}>
-                                    <img src="/assets/companies/kancoon.png" className="z-150"/>
+                                    <img src="./assets/companies/kancoon.png" className="z-150"/>
                                 </a>
                             </div>
                         </div>

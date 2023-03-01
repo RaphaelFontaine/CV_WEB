@@ -46,7 +46,7 @@ export default function Experiences(){
                 <div className="flex flex-row space-x-20">
                     <a href="https://tehtris.com/en/" target={"_blank"}>
                         <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                                <img src="/assets/companies/tehtris.png" className="z-50">
+                                <img src="./assets/companies/tehtris.png" className="z-50">
                                 </img>
                         </div>
                     </a>
@@ -85,7 +85,7 @@ export default function Experiences(){
                 <div className="flex flex-row space-x-20">
                     <a href="https://kancoon.fr" target={"_blank"}>
                         <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                                <img src="/assets/companies/kancoon.png" className="z-50">
+                                <img src="./assets/companies/kancoon.png" className="z-50">
                                 </img>
                         </div>
                     </a>
@@ -126,7 +126,7 @@ export default function Experiences(){
                 <div className="flex flex-row space-x-20">
                     <a href="https://atos.net/en/" target={"_blank"}>
                         <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                                <img src="/assets/companies/atos.png" className="z-50">
+                                <img src="./assets/companies/atos.png" className="z-50">
                                 </img>
                         </div>
                     </a>
@@ -164,7 +164,7 @@ export default function Experiences(){
                 <div className="flex flex-row space-x-20">
                     <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target={"_blank"}>
                         <div className="flex flex-row justify-center items-center w-16 h-16 md:w-24 md:h-24 rounded-full md:p-5 p-3 bg-fifth hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:scale-105 overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
-                                <img src="/assets/companies/enseirb.png" className="z-50">
+                                <img src="./assets/companies/enseirb.png" className="z-50">
                                 </img>
                         </div>
                     </a>
