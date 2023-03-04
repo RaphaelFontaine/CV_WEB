@@ -26,7 +26,8 @@ module.exports = {
       'transparent': "#fff0000",
     },
     fontSize: {
-      'name': '4.5rem',
+      'name': '4rem',
+      'phone_name': '2rem',
       'skills': '0.875rem',
       'title': '2.25rem',
       'date': '0.75rem',

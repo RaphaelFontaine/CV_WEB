@@ -71,7 +71,7 @@ export default function About(){
                     <h1 className="text-secondary">
                         Hi, my name is
                     </h1>
-                    <h1 className="font-bold text-name text-white">
+                    <h1 className="font-bold text-phone_name phone:text-name text-white">
                         Raphael FONTAINE
                     </h1>
                     <h2 className="text-third max-w-lg">
