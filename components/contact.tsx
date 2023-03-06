@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import ReCAPTCHA from "react-google-recaptcha"
 
 type FormValues = {
   Nom: string;
@@ -37,6 +38,8 @@ export function ContactForm() {
     }
     setIsSubmitting(false);
   };
+
+
   return (
     <>
     <div className='z-[2000]'>
@@ -86,14 +89,22 @@ export function ContactForm() {
               </SimpleGrid>
               <SimpleGrid className='px-10 flex flex-wrap gap-10 items-center justify-center' cols={2} mt="xl" >
                 <div>
-                  <TextInput label="Phone number" placeholder="0611223344"
+                  <TextInput label="Phone number *" placeholder="0611223344"
                     classNames={{
                       "input": "focus:border-secondary border-2",
                       'label' : "text-white"
                     }}
                     className='hover:border-secondary'
-                    {...register('Téléphone')}
-                    error={errors.Téléphone?.message}
+                    {...register('Téléphone', {
+                      required: 'Please enter a phone number',
+                      pattern: {
+                        value: phoneRegex,
+                        message: 'Please enter a valid phone number',
+                      },
+                      validate: (value) =>
+                        value.trim() !== '' ||
+                        'Please enter a phone number',
+                    })}
                   />
                   {errors.Téléphone && <p className='text-secondary absolute text-skills'>{errors.Téléphone.message}</p>}
                   </div>
