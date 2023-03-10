@@ -42,7 +42,7 @@ export function ContactForm() {
 
   return (
     <>
-    <div className='z-[2000]'>
+    <div className='z-[3000]'>
       <Toaster
         position="top-center"
         reverseOrder={false}
