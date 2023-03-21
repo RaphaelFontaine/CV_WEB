@@ -11,7 +11,7 @@ export default function Icon() {
                       <BsTelephoneOutbound className='h-8 w-8 group-hover:text-secondary transition-all duration-500'/>
                   </div>
                   <div>
-                      <a className="transition-all duration-500 flex items-center justify-center group-hover:text-secondary" href="tel:+33251959400">07 62 88 80 22</a> 
+                      <a className="transition-all duration-500 flex items-center justify-center group-hover:text-secondary" href="tel:+33762888022">+33 7 62 88 80 22</a> 
                   </div>
               </div>
             </div>
