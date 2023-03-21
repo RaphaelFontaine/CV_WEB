@@ -20,9 +20,9 @@ export default function Icon() {
           <a href="mailto:raphaelfontaine.pro@gmail.com">
             <div className="card group overflow-hidden duration-500 transition-all">
                 <div className='flex flex-col items-center justify-center space-y-6'>
-                      <div className="p-1 flex items-center justify-center h-20 w-20">
-                        <GoMail className='h-10 w-10 group-hover:text-secondary transition-all duration-500'/>
-                      </div>
+                    <div className="p-1 flex items-center justify-center h-20 w-20">
+                      <GoMail className='h-10 w-10 group-hover:text-secondary transition-all duration-500'/>
+                    </div>
                     
                     <div className="px-[15%]">
                         <a className="hover:text-green transition-all duration-500 group-hover:text-secondary" href="mailto:contact@kancoon.fr">raphaelfontaine.pro@gmail.com</a>

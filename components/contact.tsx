@@ -34,7 +34,7 @@ export function ContactForm() {
       
     } catch (error) {
       console.log('Envoi error')
-      toast.error('An error occurred while submitting the form.\nPlease contact 07 62 88 80 22')
+      toast.error('An error occurred while submitting the form.\nPlease contact +33 7 62 88 80 22')
     }
     setIsSubmitting(false);
   };
@@ -89,7 +89,7 @@ export function ContactForm() {
               </SimpleGrid>
               <SimpleGrid className='px-10 flex flex-wrap gap-10 items-center justify-center' cols={2} mt="xl" >
                 <div>
-                  <TextInput label="Phone number *" placeholder="0611223344"
+                  <TextInput label="Phone number *" placeholder="+33611223344"
                     classNames={{
                       "input": "focus:border-secondary border-2",
                       'label' : "text-white"

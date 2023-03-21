@@ -85,7 +85,7 @@ export default function About(){
                         <a href='#experiences' className="button-contact flex items-center justify-center group transition-all duration-500 scroll-smooth"> 
                             <span className="flex flex-row">
                                 View my work
-                                <svg width="20px" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex justify-center items-center ml-4 items-center transition-all duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <svg width="20px" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex justify-center items-center ml-4 transition-all duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </span>
