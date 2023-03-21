@@ -95,7 +95,10 @@ export default function Portfolio(){
                           <p>
                             Finally, I did some code optimization work because requests to the Binance API are limited per day and are long when you request data over several years. So, I stored the data already requested in json and to make API calls only to acquire new data.
                           </p>
-                          <img className="w-full" src="./assets/binance_project/wallet_repartition.png">
+                          <p>
+                            Here is an example of a matplotlib vizualisation. 
+                          </p>
+                          <img className="w-[50vh] mx-auto" src="./assets/binance_project/wallet_repartition.png">
                           </img>
                           
                         </div>
