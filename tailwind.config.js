@@ -28,10 +28,11 @@ module.exports = {
     fontSize: {
       'name': '4rem',
       'phone_name': '2rem',
-      'skills': '0.875rem',
+      'skills': '0.85rem',
       'title': '2.25rem',
       'date': '0.75rem',
       'company': '1.5rem',
+      'modal': '1rem',
       'content': '0.7rem',
     },
     extend: {},

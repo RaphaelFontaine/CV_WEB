@@ -38,6 +38,18 @@ export const SKILLS = [
         logo: "./assets/skills/c.png",
     },
     {
+        name: "Bash",
+        logo: "./assets/skills/bash.png",
+    },
+    {
+        name: "Prometheus",
+        logo: "./assets/skills/prometheus.png",
+    },
+    {
+        name: "Grafana",
+        logo: "./assets/skills/grafana.png",
+    },
+    {
         name: "R",
         logo: "./assets/skills/R.png",
     },
