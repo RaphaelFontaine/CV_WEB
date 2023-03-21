@@ -47,7 +47,7 @@ export default function Portfolio(){
                     <div className="portfolio2">
                       <div className="portfolio3">
                         <Modal 
-                          className="space-y-12 bg-primary max-w-2xl mx-auto min-w-full tracking-wide"
+                          className="z-[3000]"
                           classNames={{
                             modal:"relative max-h-screen min-w-full ft:min-w-[35vh] overflow-x-hidden overflow-y-scroll pb-16 bg-primary",
                             body: "w-full relative"
@@ -62,13 +62,14 @@ export default function Portfolio(){
                           closeOnClickOutside={true}
                           closeOnEscape={true}
                         >
-                          <div className="space-y-8 text-white">
+                        <div className="space-y-12 max-w-2xl mx-auto text-white text-modal tracking-wide">
+                          <div className="space-y-8 ">
                             <img src="./assets/companies/binance.png" alt="binance" className="w-44 mx-auto"/>
-                            <h1 className="text-company font-semibold tracking-wider mx-auto text-center max-w-md">
+                            <h1 className="text-company font-semibold tracking-wider mx-auto max-w-2xl text-center">
                               Creation of my crypto wallet charts from Binance APIs
                             </h1>
                           </div>
-                          <div className="flex flex-wrap justify-center items-center text-white py-6 gap-4">
+                          <div className="flex flex-wrap justify-center items-center py-6 gap-4">
                             <div className="flex justify-center items-center w-16 h-16 rounded-full md:p-5 p-3 bg-[#243949] overflow-hidden backdrop-blur-lg bg-gradient-to-br from-[#fff]/20 to-[#fff]/0 brightness-105">
                               <img src="./assets/skills/python.png" alt="python"></img>
                             </div>
@@ -85,19 +86,19 @@ export default function Portfolio(){
                               <img src="./assets/skills/git.png" alt="git"></img>
                             </div>
                           </div>
-                          <div className="text-white text-skills">
-                            <p>
-                              Being interested in the financial markets, and having a cryptocurrency portfolio, I wanted to carry out a project allowing me to observe the evolution of my portfolio over time.
-                            </p>
-                            <p>
-                              For this, I contacted the Binance APIs using my token allowing me to have read access to my account. From this data I created graphs in 2 ways. At first, in python with Matplotlib as in the following image
-                            </p>
-                            <img className="w-full" src="./assets/binance_project/wallet_repartition.png">
-                            </img>
-                            <p>
-                              Secondly, I sent a data stream to Prometheus, then I added it as a data source to Grafana to build my graphics with this tool, which allows for more aesthetic graphics.
-                            </p>
-                          </div>
+                          <p>
+                            Being interested in the financial markets, and having a cryptocurrency portfolio, I wanted to carry out a project allowing me to observe the evolution of my portfolio over time.
+                          </p>
+                          <p>
+                            For this, I contacted the Binance APIs using my token allowing me to have read access to my account. From this data I created graphs in 2 ways. At first, in python with Matplotlib. Then  I sent a data stream to Prometheus, and I added it as a data source to Grafana to build my graphics with this tool, which allows for more aesthetic graphics.
+                          </p>
+                          <p>
+                            Finally, I did some code optimization work because requests to the Binance API are limited per day and are long when you request data over several years. So, I stored the data already requested in json and to make API calls only to acquire new data.
+                          </p>
+                          <img className="w-full" src="./assets/binance_project/wallet_repartition.png">
+                          </img>
+                          
+                        </div>
                         </Modal>
                         <img src="./assets/companies/binance.png" className="z-150"/>
                       </div>
